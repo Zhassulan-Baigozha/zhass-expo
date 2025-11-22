@@ -46,6 +46,7 @@ Join our community of developers creating universal apps.
    eas login
    eas build:configure
    eas build -p ios
+   eas submit -p ios --path application-96555df8-0355-4b2d-b8b4-7d020ffb527d.ipa
 ```
 
 2. Запустить проект
@@ -56,5 +57,10 @@ Join our community of developers creating universal apps.
 3. Собрать проект IOS
 ```bash
    eas build -p ios
+```
+
+4. Опубликовать на TestFlight
+```bash
+   eas submit -p ios --path application-96555df8-0355-4b2d-b8b4-7d020ffb527d.ipa
 ```
 
