@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "my-expo-react-native",
+    "name": "zhass-expo",
     "slug": "my-expo-react-native",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myexporeactnative",
@@ -53,6 +53,7 @@
       "eas": {
         "projectId": "8739a7e1-bad1-4274-b3b4-4323b8080262"
       }
-    }
+    },
+    "owner": "zhass292"
   }
 }
