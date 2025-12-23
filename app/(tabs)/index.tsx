@@ -1,6 +1,6 @@
 import { Image } from "expo-image";
-import { Link } from "expo-router";
-import { Platform, StyleSheet } from "react-native";
+// import { Link } from "expo-router";
+import { StyleSheet } from "react-native";
 import { HelloWave } from "@/components/hello-wave";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
@@ -21,50 +21,6 @@ const HomeScreen = () => (
       <ThemedText type="title">Welcome! {pkg.version}</ThemedText>
       <HelloWave />
     </ThemedView>
-    <ThemedView style={styles.stepContainer}>
-      <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-      <ThemedText>
-        <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-        <ThemedText type="defaultSemiBold">
-          {Platform.select({
-            ios: "cmd + d",
-            android: "cmd + m",
-            web: "F12",
-          })}
-        </ThemedText>
-      </ThemedText>
-    </ThemedView>
-    <ThemedView style={styles.stepContainer}>
-      <Link href="/modal">
-        <Link.Trigger>
-          <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        </Link.Trigger>
-        <Link.Preview />
-        <Link.Menu>
-          <Link.MenuAction
-            title="Action"
-            icon="cube"
-            onPress={() => alert("Action pressed")}
-          />
-          <Link.MenuAction
-            title="Share"
-            icon="square.and.arrow.up"
-            onPress={() => alert("Share pressed")}
-          />
-          <Link.Menu title="More" icon="ellipsis">
-            <Link.MenuAction
-              title="Delete"
-              icon="trash"
-              destructive
-              onPress={() => alert("Delete pressed")}
-            />
-          </Link.Menu>
-        </Link.Menu>
-      </Link>
-    </ThemedView>
-    <ThemedView style={styles.stepContainer}>
-      <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-    </ThemedView>
   </ParallaxScrollView>
 );
 
@@ -73,10 +29,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
   },
   reactLogo: {
     height: 178,
