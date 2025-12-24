@@ -1,11 +1,9 @@
-// import { Image } from "expo-image";
 import { StyleSheet } from "react-native";
 import ParallaxScrollView from "@/src/components/parallax-scroll-view";
-import { ThemedText } from "@/src/components/themed-text";
+import { SpanText } from "@/src/components/span-text";
 import { ThemedView } from "@/src/components/themed-view";
 import { Collapsible } from "@/src/components/ui/collapsible";
 import { IconSymbol } from "@/src/components/ui/icon-symbol";
-import { Fonts } from "@/src/constants/theme";
 
 const TabTwoScreen = () => (
   <ParallaxScrollView
@@ -20,14 +18,10 @@ const TabTwoScreen = () => (
     }
   >
     <ThemedView style={styles.titleContainer}>
-      <ThemedText type="title" style={{ fontFamily: Fonts.rounded }}>
-        Title
-      </ThemedText>
+      <SpanText>Title</SpanText>
     </ThemedView>
     <Collapsible title="Explore">
-      <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.rounded }}>
-        Collapsible
-      </ThemedText>
+      <SpanText>Title</SpanText>
     </Collapsible>
   </ParallaxScrollView>
 );
