@@ -1,16 +1,25 @@
+// src/components/haptic-tab.tsx
 import type { BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
 import { PlatformPressable } from "@react-navigation/elements";
 import * as Haptics from "expo-haptics";
+import { IconSymbol } from "./ui/icon-symbol.ios";
 
 export const HapticTab = (props: BottomTabBarButtonProps) => (
   <PlatformPressable
     {...props}
     onPressIn={(ev) => {
       if (process.env.EXPO_OS === "ios") {
-        // Add a soft haptic feedback when pressing down on the tabs.
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       }
       props.onPressIn?.(ev);
     }}
   />
+);
+
+export const HomeTabIcon = ({ color }: { color: string }) => (
+  <IconSymbol size={28} name="house.fill" color={color} />
+);
+
+export const ExploreTabIcon = ({ color }: { color: string }) => (
+  <IconSymbol size={28} name="paperplane.fill" color={color} />
 );

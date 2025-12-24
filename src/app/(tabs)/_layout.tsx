@@ -1,9 +1,11 @@
 // src/app/(tabs)/_layout.tsx
 import { Tabs } from "expo-router";
 import { useColorScheme } from "react-native";
-
-import { HapticTab } from "@/src/components/haptic-tab";
-import { IconSymbol } from "@/src/components/ui/icon-symbol.ios";
+import {
+  ExploreTabIcon,
+  HapticTab,
+  HomeTabIcon,
+} from "@/src/components/tab-bar-button";
 import { Colors } from "@/src/constants/theme";
 
 export default function TabLayout() {
@@ -21,18 +23,14 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
+          tabBarIcon: HomeTabIcon,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
-          ),
+          tabBarIcon: ExploreTabIcon,
         }}
       />
     </Tabs>

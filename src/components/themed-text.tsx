@@ -1,3 +1,4 @@
+// src/components/themed-text.tsx
 import { StyleSheet, Text, type TextProps } from "react-native";
 
 import { useThemeColor } from "@/src/hooks/use-theme-color";
