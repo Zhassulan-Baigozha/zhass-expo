@@ -1,3 +1,4 @@
+// src/app/_layout.tsx
 import {
   DarkTheme,
   DefaultTheme,
@@ -8,12 +9,11 @@ import { StatusBar } from "expo-status-bar";
 import { useColorScheme } from "react-native";
 import "react-native-reanimated";
 
-
 export const unstable_settings = {
   anchor: "(tabs)",
 };
 
-const RootLayout = () => {
+export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
@@ -29,4 +29,3 @@ const RootLayout = () => {
     </ThemeProvider>
   );
 }
-export default RootLayout;
