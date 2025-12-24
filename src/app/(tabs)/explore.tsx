@@ -1,6 +1,6 @@
 // src/app/(tabs)/explore.tsx
-import { ThemedText } from "@/src/components/themed-text";
+import { Text } from "react-native";
 
 export default function TabTwoScreen() {
-  return <ThemedText>Title</ThemedText>;
+  return <Text style={{ color: "#fff", fontSize: 32 }}>Title</Text>;
 }

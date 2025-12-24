@@ -1,7 +1,10 @@
 // src/app/(tabs)/index.tsx
-import { ThemedText } from "@/src/components/themed-text";
+
+import { Text } from "react-native";
 import pkg from "../../../package.json";
 
 export default function HomeScreen() {
-  return <ThemedText>Welcome! {pkg.version}</ThemedText>;
+  return (
+    <Text style={{ color: "#fff", fontSize: 32 }}>Welcome! {pkg.version}</Text>
+  );
 }

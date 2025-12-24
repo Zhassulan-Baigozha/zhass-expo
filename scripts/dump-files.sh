@@ -48,7 +48,6 @@ dump_dir () {
 
 # 📂 folders
 [ -d .expo ] && dump_dir ".expo"
-[ -d .vscode ] && dump_dir ".vscode"
 [ -d src ] && dump_dir "src"
 
 echo "✔ dumped: files → $OUT"
