@@ -1821,7 +1821,7 @@
     use-latest-callback "^0.2.4"
     use-sync-external-store "^1.5.0"
 
-"@react-navigation/elements@^2.6.3", "@react-navigation/elements@^2.9.2":
+"@react-navigation/elements@^2.9.2":
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.2.tgz#0ee330ff9b82f748f05630616ada9426b1f07911"
   integrity sha512-J1GltOAGowNLznEphV/kr4zs0U7mUBO1wVA2CqpkN8ePBsoxrAmsd+T5sEYUCXN9KgTDFvc6IfcDqrGSQngd/g==
