@@ -1,26 +1,10 @@
 // src/app/_layout.tsx
-import { Tabs } from "expo-router";
-import { PaperProvider } from "react-native-paper";
+import { Stack } from 'expo-router';
 
-export default function RootLayout() {
+export default function Layout() {
   return (
-    <PaperProvider>
-      <Tabs
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: 'green',
-          tabBarInactiveTintColor: 'gray',
-        }}
-      >
-        <Tabs.Screen name="index" options={{
-          title: 'Home',
-          tabBarLabel: 'Home',
-        }} />
-        <Tabs.Screen name="second" options={{
-          title: 'Second',
-          tabBarLabel: 'Second',
-        }} />
-      </Tabs>
-    </PaperProvider>
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
 }
