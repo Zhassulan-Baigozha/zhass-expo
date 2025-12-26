@@ -1,14 +1,10 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import type { ITabBarIconProps } from "../interfaces/screens";
 
-interface ITabBarIconProps {
-  // focused: boolean;
-  color: string;
-  // size: number;
-}
 export function HomeTabBarIcon(props: Readonly<ITabBarIconProps>) {
-  return <FontAwesome size={28} name="home" color={props.color} />
+  return <FontAwesome size={28} name="home" color={props.color} />;
 }
 
 export function SettingsTabBarIcon(props: Readonly<ITabBarIconProps>) {
-  return <FontAwesome size={28} name="cog" color={props.color} />
+  return <FontAwesome size={28} name="cog" color={props.color} />;
 }

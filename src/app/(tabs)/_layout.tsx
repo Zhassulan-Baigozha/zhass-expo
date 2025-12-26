@@ -1,24 +1,20 @@
 // src/app/(tabs)/_layout.tsx
 import { Tabs } from "expo-router";
-import { HomeTabBarIcon, SettingsTabBarIcon } from "@/src/components/TabBarIcon";
+import { ScreensItem } from "@/src/screens";
 
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false, tabBarActiveTintColor: "blue" }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: HomeTabBarIcon,
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: "Settings",
-          tabBarIcon: SettingsTabBarIcon,
-        }}
-      />
+      {ScreensItem.map((screen) => (
+        <Tabs.Screen
+          key={screen.name}
+          name={screen.name}
+          options={{
+            tabBarIcon: screen.options.tabBarIcon,
+            title: screen.options.title,
+          }}
+        />
+      ))}
     </Tabs>
   );
 }
