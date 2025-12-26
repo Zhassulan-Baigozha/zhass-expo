@@ -1,3 +1,4 @@
+// src/app/(tabs)/settings.tsx
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Settings() {

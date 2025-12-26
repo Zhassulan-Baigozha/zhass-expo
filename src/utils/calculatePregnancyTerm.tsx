@@ -4,10 +4,15 @@ type PregnancyResult = {
   totalDays: number;
 };
 
-export function calculatePregnancyTerm(
-  dueDate: string | Date,
-  today: Date = new Date()
-): PregnancyResult {
+type ICalculatePregnancyTermProps = {
+  dueDate: string | Date;
+  today?: Date;
+};
+
+export function calculatePregnancyTerm({
+  dueDate,
+  today = new Date(),
+}: ICalculatePregnancyTermProps): PregnancyResult {
   const MS_PER_DAY = 1000 * 60 * 60 * 24;
 
   const due = new Date(dueDate);
@@ -17,7 +22,7 @@ export function calculatePregnancyTerm(
 
   // Сколько дней прошло с начала беременности
   const totalDays = Math.floor(
-    (today.getTime() - pregnancyStart.getTime()) / MS_PER_DAY
+    (today.getTime() - pregnancyStart.getTime()) / MS_PER_DAY,
   );
 
   const weeks = Math.floor(totalDays / 7);

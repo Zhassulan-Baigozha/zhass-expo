@@ -1,3 +1,4 @@
+// src/components/TabBarIcon.tsx
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import type { ITabBarIconProps } from "../interfaces/screens";
 
