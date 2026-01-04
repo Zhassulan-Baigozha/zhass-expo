@@ -39,8 +39,3 @@ You can start developing by editing the files inside the **app** directory. This
 ```bash
    eas submit -p ios --latest
 ```
-
-5. Опубликовать на TestFlight конкретную версию 
-```bash
-   eas submit -p ios --path ../expoexpo-build/2025.12.23/application-7e58dcef-5d48-4a05-9b97-91916ab002ce.ipa
-```
